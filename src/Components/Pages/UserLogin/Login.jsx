@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import SocialLogin from './SocialLogin';
 
 const Login = () => {
 
@@ -37,7 +38,7 @@ const Login = () => {
                     </Link>
 
                     </p>
-                    {/* <SocialLogin></SocialLogin> */}
+                    <SocialLogin></SocialLogin>
 
                     {/* {
                         loginError ?
