@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import toast from "react-hot-toast";
 
 
 
@@ -10,11 +11,19 @@ const SocialLogin = () => {
 
 
     const handleSocialLogin = (media) => {
+
+
         media()
             .then(res => {
                 console.log(res.user)
+                if (res.user) {
+                    toast.success('Register successful')
+                }
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                console.error(error)
+                toast.error(error.message)
+            })
     }
 
     return (

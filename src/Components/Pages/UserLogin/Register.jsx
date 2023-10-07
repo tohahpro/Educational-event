@@ -3,6 +3,7 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
 import { AuthContext } from '../../Provider/AuthProvider';
+import toast from 'react-hot-toast';
 
 
 const Register = () => {
@@ -22,8 +23,11 @@ const Register = () => {
         createUser(email, password)
             .then(res => {
                 console.log(res.user)
+                toast.success('Register successful')
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                toast.error(error.message)
+            })
     }
 
 
