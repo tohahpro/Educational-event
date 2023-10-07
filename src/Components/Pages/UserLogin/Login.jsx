@@ -1,19 +1,45 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
+import { AuthContext } from '../../Provider/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false)
-    // const [loginError, setLoginError] = useState('')
-    // const [success, setSuccess] = useState('')
+
+
+    const { userLogin } = useContext(AuthContext)
+
+    const handleLogin = (e) => {
+        e.preventDefault()
+        const name = e.target.name.value
+        const email = e.target.email.value
+        const password = e.target.password.value
+        console.log(name, email, password);
+
+
+        userLogin(email, password)
+            .then(res => {
+                console.log(res.user)
+                if (res.user) {
+                    toast.success('Register successful')
+                }
+            })
+            .catch(error => {
+                console.log(error)
+                toast.error(error.message)
+            })
+
+
+    }
 
     return (
         <div>
             <h2 className="text-center text-4xl font-semibold pt-32 mb-16">LogIn Form</h2>
 
-            <form >
+            <form onSubmit={handleLogin}>
                 <div className='max-w-2xl mx-auto border shadow-lg p-8 rounded-xl '>
 
                     {/* email field  */}
@@ -40,15 +66,6 @@ const Login = () => {
                     </p>
                     <SocialLogin></SocialLogin>
 
-                    {/* {
-                        loginError ?
-                            <p className='mt-2 text-red-600 text-base font-medium text-center'>{loginError}</p> : ''
-                    }
-
-                    {
-                        success ?
-                            <p className='mt-2 text-green-600 text-base font-medium text-center'>{success}</p> : '' */}
-                    {/* } */}
                 </div>
 
             </form>
