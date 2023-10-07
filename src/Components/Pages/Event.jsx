@@ -15,7 +15,7 @@ const Event = () => {
                                     <h2 className="card-title">{service.title}</h2>
                                     <p className="font-normal border-b-2">{service.teacher}</p>
                                     <div className="card-actions ">
-                                        <Link to={`/event/${service.id}`}
+                                        <Link to={`/eventDetails/${service.id}`}
                                             className="btn w-full btn-primary">See Details
                                         </Link>
                                     </div>

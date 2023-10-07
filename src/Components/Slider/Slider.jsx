@@ -24,7 +24,7 @@ const Slider = () => {
                 slidesPerView={1}
                 autoplay={{
                     delay: 25,
-
+                    
                 }}
                 pagination={{ clickable: true }}
                 onSwiper={(swiper) => console.log(swiper)}

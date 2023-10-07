@@ -43,6 +43,16 @@ const Navbar = () => {
                                 Event
                             </NavLink>
                         </li>
+                        <li className="text-black text-lg font-normal">
+                            <NavLink
+                                to="/register"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
+                                }
+                            >
+                                Register
+                            </NavLink>
+                        </li>
 
                         <div>
 
