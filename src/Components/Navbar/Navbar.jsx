@@ -11,7 +11,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav className="flex justify-between items-center px-4 absolute top-8 left-0 right-0 z-[2] max-w-screen-xl mx-auto">
+            <nav className="flex justify-between items-center p-4  max-w-screen-xl mx-auto shadow-lg">
 
                 <h2>logo</h2>
                 <div className="flex flex-row-reverse">

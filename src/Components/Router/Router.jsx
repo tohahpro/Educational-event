@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home";
 import Event from "../Pages/Event";
+import EventDetails from "../Pages/EventDetails";
 
 const myCreateRouter = createBrowserRouter([
     {
@@ -10,11 +11,18 @@ const myCreateRouter = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('/services.json')
             },
             {
                 path: '/event',
-                element: <Event></Event>
+                element: <Event></Event>,
+                loader: () => fetch('/services.json')
+            },
+            {
+                path: '/event/:id',
+                element: <EventDetails></EventDetails>,
+                loader: () => fetch('/services.json')
             }
         ]
     }

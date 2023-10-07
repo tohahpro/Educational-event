@@ -4,6 +4,7 @@
         "image": "https://i.ibb.co/9HMdyVy/Seminar-Management.jpg",
         "title": "Seminar Management",
         "description": "Seminar Management is a comprehensive service that efficiently handles all aspects of organizing and executing seminars. From conceptualization to execution, it encompasses venue selection, registration logistics, scheduling, and technical support. Seminar managers coordinate speakers, handle marketing and promotion, and ensure a smooth flow of the event. They create a conducive environment for knowledge sharing and networking, leaving attendees free to focus on the content. With meticulous planning and attention to detail, Seminar Management ensures that seminars, whether in-person or virtual, are professionally orchestrated, facilitating seamless and productive educational experiences for both presenters and participants.",
+        "teacher": "Dr. Michael Reynolds",
         "price": 19.99
     },
     {
@@ -11,6 +12,7 @@
         "image": "https://i.ibb.co/VvyJkBy/Workshop-facilitation.jpg",
         "title": "Workshop Facilitation",
         "description": "Workshop Facilitation is a critical element in the success of educational and training events. It involves the skilled guidance of an expert facilitator who leads, orchestrates, and manages the various components of a workshop to ensure that it achieves its intended objectives.A workshop facilitator is like the conductor of an orchestra, ensuring that all elements harmonize to create a productive and engaging learning experience. They play a pivotal role in shaping the workshop's structure, content delivery, and overall flow.One of the primary responsibilities of a workshop facilitator is to create an inclusive and participatory environment. They encourage active engagement from participants, stimulate discussions, and promote collaborative problem-solving. They also adapt their facilitation style to the needs of the group, making complex concepts accessible and understandable.",
+        "teacher": "Mr. David Mitchell",
         "price": 29.99
     },
     {
@@ -18,6 +20,7 @@
         "image": "https://i.ibb.co/vHXN5bL/Online-Learning-Platforms.jpg",
         "title": "Online Learning Platforms",
         "description": "Online Learning Platforms are digital environments designed to facilitate education and skill development over the internet. They offer a diverse range of courses, lectures, and learning materials accessible to users globally. These platforms empower learners to study at their own pace, providing flexibility and convenience. Features often include multimedia content, quizzes, and interactive assignments. Online Learning Platforms cater to various subjects, from academic disciplines to vocational skills, fostering continuous learning and professional growth. With the ability to connect with instructors and peers remotely, these platforms have become invaluable tools for expanding knowledge and acquiring new skills in an increasingly digital world.",
+        "teacher": "Mrs. Jessica Carter",
         "price": 39.99
     },
     {
@@ -25,6 +28,7 @@
         "image": "https://i.ibb.co/Wt0qM1L/Training-Material-Development.jpg",
         "title": "Training Material Development",
         "description": "Training Material Development involves the creation of customized educational resources to support effective learning experiences. These materials encompass a variety of formats, including presentations, manuals, e-learning modules, and interactive content. Tailored to the specific needs of the audience, they aim to convey complex concepts and skills in a clear, engaging, and structured manner. Expertly crafted training materials are vital for facilitating knowledge transfer, skill development, and overall comprehension during training sessions. Whether for corporate training, academic courses, or workshops, well-designed training materials play a pivotal role in ensuring that learners grasp and retain the intended knowledge and skills.",
+        "teacher": "Dr. Michael Reynolds",
         "price": 49.99
     },
     {
@@ -32,6 +36,7 @@
         "image": "https://i.ibb.co/sCHLjjj/Interactive-Learning-Tools.jpg",
         "title": "Interactive Learning Tools",
         "description": "Interactive Learning Tools are dynamic educational resources designed to engage and empower learners in a participatory and immersive way. These tools utilize technology to create an interactive and stimulating learning environment, enabling users to actively explore, practice, and apply knowledge. They can encompass a variety of formats, including gamified modules, simulations, virtual labs, and collaborative platforms. Interactive Learning Tools encourage critical thinking, problem-solving, and real-world application of concepts, making the learning process enjoyable and effective. Whether used in classrooms, corporate training, or online courses, these tools foster active participation and help individuals acquire and retain knowledge more effectively.",
+        "teacher": "Professor Sarah Adams",
         "price": 59.99
     },
     {
@@ -39,6 +44,7 @@
         "image": "https://i.ibb.co/LPcKXSJ/Technical-Support.jpg",
         "title": "Technical Support and AV Services",
         "description": "Technical Support and AV Services are essential for ensuring the seamless execution of educational and training events. Skilled professionals in this field provide comprehensive assistance, managing audiovisual equipment, lighting, and technical setups. They troubleshoot issues in real-time, guaranteeing that presentations, webinars, and workshops run smoothly. From setting up projectors and sound systems to troubleshooting connectivity problems, these experts ensure that both presenters and attendees experience a glitch-free event. Their expertise in handling complex AV technology and providing prompt technical assistance ensures that your educational event is a resounding success, free from distractions and technical hiccups.",
+        "teacher": "Dr. Christopher Wells",
         "price": 69.99
     },
     {
@@ -46,6 +52,7 @@
         "image": "https://i.ibb.co/0KhYP0C/Certification-Services.jpg",
         "title": "Certification Services",
         "description": "Certification and Assessment Services are vital components of educational and training events. These services ensure that attendees not only acquire knowledge and skills but also receive official recognition for their achievements. They encompass the design, administration, and evaluation of assessments and certification processes. Whether it's verifying competence in a specific field, compliance with industry standards, or successful completion of a training program, these services provide a structured and credible way to validate learning outcomes. By offering a formal recognition mechanism, Certification and Assessment Services help individuals and organizations demonstrate their expertise and commitment to excellence in their respective domains.",
+        "teacher": "Mrs. Rebecca Turner",
         "price": 79.99
     },
     {
@@ -53,6 +60,7 @@
         "image": "https://i.ibb.co/dP5NFjL/Event-Marketing-and-Promotion.jpg",
         "title": "Event Marketing and Promotion",
         "description": "Event Marketing and Promotion is a strategic approach to creating awareness and generating interest in events. It involves the use of various marketing channels and tactics to attract and engage target audiences. This service leverages digital marketing, social media, email campaigns, content creation, and traditional advertising to spread the word about an event, boost attendance, and create a buzz. Effective event marketing and promotion not only drive attendance but also build anticipation, convey event benefits, and highlight unique selling points, ultimately ensuring that the event reaches its intended audience and achieves its goals.",
+        "teacher": "Dr. William Parker",
         "price": 89.99
     },
     {
@@ -60,13 +68,15 @@
         "image": "https://i.ibb.co/5v8V1pK/Accessibility-Services.jpg",
         "title": "Accessibility Services",
         "description": "Accessibility Services ensure that training content is inclusive and accessible to individuals with disabilities. These services encompass various accommodations, such as providing closed captioning for videos, audio descriptions for visual content, and accessible document formats. By removing barriers to learning, Accessibility Services ensure that all participants, regardless of their disabilities, can fully engage with and benefit from training events. This commitment to inclusivity not only complies with legal requirements but also fosters a more diverse and equitable learning environment, ultimately enhancing the overall effectiveness of educational and training programs.",
+        "teacher": "Mr. Richard Clark",
         "price": 99.99
     },
     {
         "id": 10,
         "image": "https://i.ibb.co/3NPZX64/Speaker-and-Trainer-Booking.jpg",
-        "title": "Speaker and Trainer Booking",
+        "title": "Speaker and Trainer",
         "description": "Speaker and Trainer Booking is a pivotal service that connects event organizers with seasoned experts and engaging communicators. It simplifies the process of securing charismatic speakers and skilled trainers for various educational and training events. Whether it's a keynote address, workshop, or seminar, this service ensures the right match between the event's objectives and the speaker or trainer's expertise. It handles negotiations, contracts, and logistics, allowing organizers to focus on content and attendee experience. With access to a diverse pool of talent, Speaker and Trainer Booking elevates the impact and success of educational and training gatherings.",
+        "teacher": "Dr. James Bennett",
         "price": 109.99
     }
 ]

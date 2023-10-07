@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.custom-img {
+    background-image: url('https://i.ibb.co/9HMdyVy/Seminar-Management.jpg');
+}
