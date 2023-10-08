@@ -7,6 +7,7 @@ import Login from "../Pages/UserLogin/login";
 import Register from "../Pages/UserLogin/Register";
 import ErrorPage from "../Pages/ErrorPage";
 import PrivateRouter from "./PrivateRouter";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 
 const myCreateRouter = createBrowserRouter([
     {
@@ -21,17 +22,21 @@ const myCreateRouter = createBrowserRouter([
             },
             {
                 path: '/event',
-                element: <PrivateRouter><Event></Event></PrivateRouter>,
+                element: <Event></Event>,
                 loader: () => fetch('/services.json')
             },
             {
                 path: '/eventDetails/:id',
-                element: <PrivateRouter><EventDetails></EventDetails></PrivateRouter>,
+                element: <EventDetails></EventDetails>,
                 loader: () => fetch('/services.json')
             },
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/dashboard',
+                element: <PrivateRouter><Dashboard></Dashboard></PrivateRouter>
             },
             {
                 path: '/register',
