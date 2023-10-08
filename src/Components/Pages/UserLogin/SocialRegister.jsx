@@ -5,9 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
 
-
-const SocialLogin = () => {
-
+const SocialRegister = () => {
     const location = useLocation()
     const navigate = useNavigate()
     // google SignIn context
@@ -21,7 +19,7 @@ const SocialLogin = () => {
             .then(res => {
 
                 if (res.user) {
-                    toast.success('Login successful')
+                    toast.success('Register successful')
                 }
                 // navigate('/')
                 navigate(location?.state ? location.state : '/')
@@ -49,6 +47,7 @@ const SocialLogin = () => {
             </div>
         </div>
     );
+
 };
 
-export default SocialLogin;
+export default SocialRegister;

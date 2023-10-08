@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
 import { AuthContext } from '../../Provider/AuthProvider';
 import toast from 'react-hot-toast';
@@ -11,6 +11,8 @@ const Login = () => {
 
 
     const { userLogin } = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
 
     const handleLogin = (e) => {
         e.preventDefault()
@@ -19,16 +21,19 @@ const Login = () => {
         const password = e.target.password.value
         console.log(name, email, password);
 
+        if (!/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(password)) {
+            return toast.error("Invalid password")
+        }
 
         userLogin(email, password)
             .then(res => {
-                console.log(res.user)
                 if (res.user) {
-                    toast.success('Register successful')
+                    toast.success('Login successful')
                 }
+                navigate(location?.state ? location.state : '/')
+
             })
             .catch(error => {
-                console.log(error)
                 toast.error(error.message)
             })
 
@@ -69,9 +74,6 @@ const Login = () => {
                 </div>
 
             </form>
-
-
-
 
         </div>
     );

@@ -5,11 +5,14 @@ import Event from "../Pages/Event";
 import EventDetails from "../Pages/EventDetails";
 import Login from "../Pages/UserLogin/login";
 import Register from "../Pages/UserLogin/Register";
+import ErrorPage from "../Pages/ErrorPage";
+import PrivateRouter from "./PrivateRouter";
 
 const myCreateRouter = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -18,12 +21,12 @@ const myCreateRouter = createBrowserRouter([
             },
             {
                 path: '/event',
-                element: <Event></Event>,
+                element: <PrivateRouter><Event></Event></PrivateRouter>,
                 loader: () => fetch('/services.json')
             },
             {
                 path: '/eventDetails/:id',
-                element: <EventDetails></EventDetails>,
+                element: <PrivateRouter><EventDetails></EventDetails></PrivateRouter>,
                 loader: () => fetch('/services.json')
             },
             {

@@ -5,7 +5,6 @@ import { useLoaderData, useParams } from "react-router-dom";
 const EventDetails = () => {
 
     const allServices = useLoaderData()
-    console.log(allServices);
     const { id } = useParams()
     const IdInt = parseInt(id)
 

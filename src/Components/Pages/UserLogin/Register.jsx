@@ -1,16 +1,18 @@
 import { useContext, useState } from 'react';
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
-import SocialLogin from './SocialLogin';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import toast from 'react-hot-toast';
+import SocialRegister from './SocialRegister';
 
 
 const Register = () => {
 
 
     const [showPassword, setShowPassword] = useState(false)
-    const { createUser } = useContext(AuthContext)
+    const { createUser, userUpdate } = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -20,10 +22,21 @@ const Register = () => {
         const password = e.target.password.value
         console.log(name, email, image, password);
 
+        if (!/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(password)) {
+            return toast.error("The minimum length for passwords is six characters, including a capital letter and a special character.")
+        }
+
         createUser(email, password)
             .then(res => {
-                console.log(res.user)
-                toast.success('Register successful')
+                userUpdate(name, image)
+                    .then(() => {
+
+                    })
+                if (res.user) {
+                    toast.success('Register successful')
+                    navigate('/')
+                    navigate(location?.state ? location.state : '/')
+                }
             })
             .catch(error => {
                 toast.error(error.message)
@@ -69,16 +82,8 @@ const Register = () => {
                     </Link>
 
                     </p>
-                    <SocialLogin></SocialLogin>
+                    <SocialRegister></SocialRegister>
 
-                    {/* {
-                        registerError ?
-                            <p className='mt-2 text-red-600 text-base font-medium text-center'>{registerError}</p> : ''
-                    }
-                    {
-                        success ?
-                            <p className='mt-2 text-green-600 text-base font-medium text-center'>{success}</p> : ''
-                    } */}
                 </div>
 
             </form>

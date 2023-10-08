@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, A11y, Autoplay } from 'swiper/modules';
+import { Pagination, A11y } from 'swiper/modules';
 
 
 import 'swiper/css';
@@ -24,7 +24,7 @@ const Slider = () => {
                 slidesPerView={1}
                 autoplay={{
                     delay: 25,
-                    
+
                 }}
                 pagination={{ clickable: true }}
                 onSwiper={(swiper) => console.log(swiper)}

@@ -5,12 +5,10 @@ import { Toaster } from "react-hot-toast";
 
 const MainLayout = () => {
     return (
-        <div className="max-w-screen-xl mx-auto">
+        <div className="">
             <Navbar></Navbar>
             <Outlet></Outlet>
-            <Toaster
-                position="top-center"
-                reverseOrder={false} />
+            <Toaster />
         </div>
     );
 };
