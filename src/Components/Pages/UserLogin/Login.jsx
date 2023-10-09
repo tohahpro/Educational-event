@@ -60,7 +60,7 @@ const Login = () => {
                             <span onClick={() => setShowPassword(!showPassword)} className="absolute top-4 right-2 text-lg" required>{showPassword ? <AiOutlineEye></AiOutlineEye> : <AiOutlineEyeInvisible></AiOutlineEyeInvisible>}</span>
                         </div>
                     </div>
-                    <input type="submit" value="Login" className="btn w-full p-2 rounded-lg" />
+                    <input type="submit" value="Login" className="btn w-full p-2 rounded-lg bg-black text-white" />
 
                     <p className='mt-2'>New Here ? Please  <Link to='/register'>
                         <span className='text-blue-600'>

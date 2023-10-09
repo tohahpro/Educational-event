@@ -11,7 +11,7 @@ const Dashboard = () => {
         if (bookingItem.length > 0) {
             setBookingItems(bookingItem)
         } else {
-            setNoDataFound('There is no data for this since you did not donate.')
+            setNoDataFound('There is no data for this since you did not booking.')
         }
 
     }, [])
@@ -43,7 +43,7 @@ const Dashboard = () => {
                                                     </div>
                                                 </div>
                                                 <p className="md:text-xl md:font-semibold">{item.title}</p>
-                                                <span className="md:text-base md:font-semibold">Booking-price : {item.price}</span>
+                                                <span className="md:text-base md:font-semibold">Booking-price : {item.price} $</span>
 
                                             </div>
                                         </div>
