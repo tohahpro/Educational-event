@@ -1,5 +1,5 @@
 import { Link, useLoaderData } from "react-router-dom";
-import { GrLocation } from 'react-icons/gr';
+import { PiCurrencyDollar } from 'react-icons/pi';
 
 
 
@@ -23,8 +23,8 @@ const Event = () => {
                                     <h2 className="card-title flex justify-center">{service.title}</h2>
 
                                     <div className="flex gap-1 items-center mx-auto">
-                                        <GrLocation className="font-medium text-lg"></GrLocation>
-                                        <p className="text-base font-medium text-center"> Location : <span className="text-lg font-semibold text-red-500">{service.location}</span></p>
+                                        <PiCurrencyDollar className="font-medium text-lg"></PiCurrencyDollar>
+                                        <p className="text-base font-medium text-center"> Booking-Price : <span className="text-lg font-semibold text-red-500">{service.price}</span></p>
                                     </div>
 
                                     <div className="card-actions ">

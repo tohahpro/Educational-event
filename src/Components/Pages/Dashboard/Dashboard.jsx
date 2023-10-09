@@ -23,7 +23,7 @@ const Dashboard = () => {
                     <p className="flex items-center justify-center h-[80vh] text-sm  md:text-xl text-white font-bold">{noDataFound}</p>
                     :
                     <div className="pt-40">
-                        <h2 className="text-center text-3xl font-bold py-6 text-white">Your Booking event </h2>
+                        <h2 className="text-center text-3xl font-bold py-6 text-white">Your Booking</h2>
                         <div className="grid lg:grid-cols-2 pb-40 mt-12 max-w-screen-xl mx-auto gap-4">
                             {
                                 bookingItems.map(item =>
@@ -43,7 +43,7 @@ const Dashboard = () => {
                                                     </div>
                                                 </div>
                                                 <p className="md:text-xl md:font-semibold">{item.title}</p>
-                                                <span className="md:text-base md:font-semibold">Location : {item.location}</span>
+                                                <span className="md:text-base md:font-semibold">Booking-price : {item.price}</span>
 
                                             </div>
                                         </div>

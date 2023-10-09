@@ -21,7 +21,7 @@ const Login = () => {
         const password = e.target.password.value
         console.log(name, email, password);
 
-        if (!/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(password)) {
+        if (!/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password)) {
             return toast.error("Invalid password")
         }
 
