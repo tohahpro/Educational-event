@@ -1,8 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 .custom-img {
-    background-image: url('https://i.ibb.co/XtrWQwb/E-learning-Event.jpg');
+    background-image: url('https://i.ibb.co/C0LDR9X/home-banner-cover.jpg');
+}
+
+.event-img {
+    background-image: url('https://i.ibb.co/D9C172j/events-banner.jpg');
+}
+
+
+.bottom-img {
+    background-image: url('https://i.ibb.co/ScN7byf/memorable.jpg');
 }

@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layout/MainLayout";
-import Home from "../Pages/Home";
+import Home from "../Pages/Home/Home";
 import Event from "../Pages/Event";
 import EventDetails from "../Pages/EventDetails";
 import Login from "../Pages/UserLogin/login";
@@ -8,6 +8,7 @@ import Register from "../Pages/UserLogin/Register";
 import ErrorPage from "../Pages/ErrorPage";
 import PrivateRouter from "./PrivateRouter";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import Profile from "../Pages/Profile/Profile";
 
 const myCreateRouter = createBrowserRouter([
     {
@@ -21,13 +22,13 @@ const myCreateRouter = createBrowserRouter([
                 loader: () => fetch('/services.json')
             },
             {
-                path: '/event',
+                path: '/services',
                 element: <Event></Event>,
                 loader: () => fetch('/services.json')
             },
             {
                 path: '/eventDetails/:id',
-                element: <EventDetails></EventDetails>,
+                element: <PrivateRouter><EventDetails></EventDetails></PrivateRouter>,
                 loader: () => fetch('/services.json')
             },
             {
@@ -37,6 +38,10 @@ const myCreateRouter = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <PrivateRouter><Dashboard></Dashboard></PrivateRouter>
+            },
+            {
+                path: '/profile',
+                element: <PrivateRouter><Profile></Profile></PrivateRouter>
             },
             {
                 path: '/register',

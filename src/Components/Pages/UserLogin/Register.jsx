@@ -45,11 +45,11 @@ const Register = () => {
 
 
     return (
-        <div>
-            <h2 className="text-center text-4xl font-semibold pt-32 mb-16">Register Form</h2>
+        <div className='bg-[#252B48]'>
+            <h2 className="text-center text-4xl font-semibold text-white pt-32 mb-16">Register Form</h2>
 
-            <form onSubmit={handleRegister}>
-                <div className='max-w-2xl mx-auto border shadow-lg p-8 rounded-xl'>
+            <form onSubmit={handleRegister} className='pb-32 '>
+                <div className='max-w-2xl mx-auto border shadow-lg p-8 rounded-xl bg-slate-100'>
                     <div>
                         <label htmlFor="">Name</label><br />
                         <input className='border w-full rounded-md p-2 my-2' type="text" name="name" placeholder='Your Name' required />
@@ -73,7 +73,7 @@ const Register = () => {
                             <span onClick={() => setShowPassword(!showPassword)} className="absolute top-4 right-2 text-xl" required>{showPassword ? <AiOutlineEye></AiOutlineEye> : <AiOutlineEyeInvisible></AiOutlineEyeInvisible>}</span>
                         </div>
                     </div>
-                    <input type="submit" value="Register" className="btn bg-[#4A07DA] text-white w-full font-medium p-2 rounded-lg" />
+                    <input type="submit" value="Register" className="btn bg-black hover:bg-[#252B48] text-white w-full font-medium p-2 rounded-lg" />
 
                     <p className='mt-2'>Already have account ? Please  <Link to='/login'>
                         <span className='text-blue-600'>

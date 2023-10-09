@@ -38,12 +38,12 @@ const SocialLogin = () => {
             <div className="flex gap-12">
                 <div
                     onClick={() => handleSocialLogin(googleLogin)}
-                    className="py-2 px-4 flex items-center gap-1 border rounded-md">
+                    className="py-2 px-4 flex items-center gap-1 border rounded-md hover:cursor-pointer">
                     <FcGoogle className="text-2xl"></FcGoogle> <span className="text-base font-medium">Google</span>
                 </div>
                 <div
                     onClick={() => handleSocialLogin(gitHubLogin)}
-                    className="py-2 px-4 flex items-center gap-1 border rounded-md">
+                    className="py-2 px-4 flex items-center gap-1 border rounded-md hover:cursor-pointer">
                     <FaGithub className="text-2xl"></FaGithub> <span className="text-base font-medium">Google</span>
                 </div>
             </div>

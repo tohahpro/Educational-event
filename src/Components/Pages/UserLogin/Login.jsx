@@ -41,11 +41,11 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <h2 className="text-center text-4xl font-semibold pt-32 mb-16">LogIn Form</h2>
+        <div className='bg-[#252B48]'>
+            <h2 className="text-center text-4xl  text-white font-semibold pt-40 mb-16">LogIn Form</h2>
 
-            <form onSubmit={handleLogin}>
-                <div className='max-w-2xl mx-auto border shadow-lg p-8 rounded-xl '>
+            <form onSubmit={handleLogin} className='pb-32'>
+                <div className='max-w-2xl mx-auto border shadow-lg p-8 rounded-xl bg-slate-100'>
 
                     {/* email field  */}
                     <div>

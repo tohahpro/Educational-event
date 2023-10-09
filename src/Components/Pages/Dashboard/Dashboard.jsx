@@ -17,14 +17,14 @@ const Dashboard = () => {
     }, [])
 
     return (
-        <div>
+        <div className="bg-[#252B48]">
             {
                 noDataFound ?
-                    <p className="flex items-center justify-center h-[80vh] text-sm  md:text-xl font-bold">{noDataFound}</p>
+                    <p className="flex items-center justify-center h-[80vh] text-sm  md:text-xl text-white font-bold">{noDataFound}</p>
                     :
-                    <div>
-                        <h2 className="text-center py-12">Your event Booking</h2>
-                        <div className="grid lg:grid-cols-2 my-40 max-w-screen-xl mx-auto gap-4">
+                    <div className="pt-40">
+                        <h2 className="text-center text-3xl font-bold py-6 text-white">Your Booking event </h2>
+                        <div className="grid lg:grid-cols-2 pb-40 mt-12 max-w-screen-xl mx-auto gap-4">
                             {
                                 bookingItems.map(item =>
                                     <div key={item.id}>
@@ -43,7 +43,7 @@ const Dashboard = () => {
                                                     </div>
                                                 </div>
                                                 <p className="md:text-xl md:font-semibold">{item.title}</p>
-                                                <span className="md:text-base md:font-semibold">$ {item.price}.00</span>
+                                                <span className="md:text-base md:font-semibold">Location : {item.location}</span>
 
                                             </div>
                                         </div>
