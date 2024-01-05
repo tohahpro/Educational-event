@@ -3,7 +3,7 @@ import logo from '../../assets/Images/Logo-color-removebg-preview.png'
 const Footer = () => {
     return (
         <div>
-            <footer className="lg:flex px-32 lg:px-0 lg:justify-around py-20 bg-black text-white">
+            <footer className="lg:flex px-56 lg:px-0 lg:justify-around py-20 bg-black text-white">
                 <div className='flex items-center'>
                     <img className='w-24' src={logo} alt="" />
                     <p className='text-xl font-semibold'> Aventri</p>

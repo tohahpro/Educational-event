@@ -9,7 +9,7 @@ const PrivateRouter = ({ children }) => {
     const location = useLocation()
     console.log(location.pathname);
 
-    if (user) {
+    if (user?.emailVerified) {
         return children;
     }
 

@@ -10,7 +10,7 @@ const Register = () => {
 
 
     const [showPassword, setShowPassword] = useState(false)
-    const { createUser, userUpdate } = useContext(AuthContext)
+    const { createUser, userUpdate, userLogin, emailVerified } = useContext(AuthContext)
     const location = useLocation()
     const navigate = useNavigate()
 
@@ -22,21 +22,32 @@ const Register = () => {
         const password = e.target.password.value
         console.log(name, email, image, password);
 
-        if (!/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password)) {
-            return toast.error("The minimum length for passwords is six characters, including a capital letter and a special character.")
-        }
+        // if (!/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password)) {
+        //     return toast.error("The minimum length for passwords is six characters, including a capital letter and a special character.")
+        // }
 
         createUser(email, password)
             .then(res => {
+                userLogin(() => {
+
+                })
+
                 userUpdate(name, image)
                     .then(() => {
 
                     })
+
                 if (res.user) {
                     toast.success('Register successful')
                     navigate('/')
                     navigate(location?.state ? location.state : '/')
                 }
+
+                emailVerified()
+                    .then(() => {
+                        toast.success('Please check your email and verify your account')
+                    })
+
             })
             .catch(error => {
                 toast.error(error.message)

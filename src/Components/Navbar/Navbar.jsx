@@ -29,7 +29,7 @@ const Navbar = () => {
     }, [])
 
     return (
-        <div className="max-w-[1400px]">
+        <div className="lg:mx-56">
             <nav style={{ backgroundColor: `${color}` }}
                 className="
                         px-4 absolute top-8 left-0 right-0 z-[2]           
@@ -45,7 +45,7 @@ const Navbar = () => {
                     </div>
 
                     <ul style={{ color: `${textColor}` }}
-                        className={`absolute md:flex mt-64 ml-40 bg-black md:m-0 p-6 md:p-0 lg:m-0 duration-2000
+                        className={`absolute md:flex mt-64 w-full lg:max-w-fit bg-black md:m-0 p-6 md:p-0 duration-2000
                         ${open ? ' ' : 'hidden'} md:static 
                         md:bg-transparent text-center rounded-lg gap-8`}>
                         <li className=" text-xl font-medium">
@@ -68,26 +68,35 @@ const Navbar = () => {
                                 Services
                             </NavLink>
                         </li>
-                        <li className=" text-xl font-medium">
-                            <NavLink
-                                to="/dashboard"
-                                className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
-                                }
-                            >
-                                Dashboard
-                            </NavLink>
-                        </li>
-                        <li className=" text-xl font-medium">
-                            <NavLink
-                                to="/profile"
-                                className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
-                                }
-                            >
-                                Profile
-                            </NavLink>
-                        </li>
+                        {
+                            user?.emailVerified ?
+
+
+                                <>
+                                    <li className=" text-xl font-medium">
+                                        <NavLink
+                                            to="/dashboard"
+                                            className={({ isActive, isPending }) =>
+                                                isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
+                                            }
+                                        >
+                                            Dashboard
+                                        </NavLink>
+                                    </li>
+                                    <li className=" text-xl font-medium">
+                                        <NavLink
+                                            to="/profile"
+                                            className={({ isActive, isPending }) =>
+                                                isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
+                                            }
+                                        >
+                                            Profile
+                                        </NavLink>
+                                    </li>
+                                </>
+
+                                : ''
+                        }
                         <li className=" text-xl font-medium">
                             <NavLink
                                 to="/register"

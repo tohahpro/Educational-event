@@ -4,10 +4,12 @@ import { Toaster } from "react-hot-toast";
 import Footer from "../Footer/Footer";
 
 
+
 const MainLayout = () => {
     return (
         <div className="">
             <Navbar></Navbar>
+
             <Outlet></Outlet>
             <Footer></Footer>
             <Toaster />

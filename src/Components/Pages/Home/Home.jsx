@@ -21,7 +21,7 @@ const Home = () => {
     return (
         <div className="">
             <Banner></Banner>
-            <div className="lg:max-w-[1400px] mx-auto">
+            <div className="mx-56">
 
                 <div className=" lg:flex flex-row-reverse my-20 md:items-center mx-auto ">
 
@@ -50,7 +50,7 @@ const Home = () => {
 
             </div>
 
-            <div className="max-w-[1400px] mx-auto">
+            <div className="mx-56">
 
                 <h2 className="text-center text-3xl font-semibold py-4">Our Services</h2>
                 <p className="text-center w-[20rem] lg:w-[750px] mx-auto mb-4">Orci, gravida at dolor penatibus praesent. Id ac nunc nunc elementum vitae nunc cursus. Nunc cras facilisis fermentum elementum, suspendisse augue dolor.</p>
@@ -68,7 +68,7 @@ const Home = () => {
                         {
                             services.slice(0, 6).map(service =>
                                 <div key={service.id}>
-                                    <div className="card card-compact h-96 lg:w-96 bg-base-100 shadow-xl">
+                                    <div className="card card-compact   bg-base-100 shadow-xl">
                                         <figure><img className="w-full" src={service.image} alt="Shoes" /></figure>
                                         <div className="card-body">
                                             <h2 className="card-title text-left">{service.title}</h2>
